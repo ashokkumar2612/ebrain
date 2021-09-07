@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>carousel</title>
+	<style>
+		.carousel-inner{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="img" class="carousel slide" data-ride="carosel">
+		<!-- indicaters -->
+		<ul class="carousel-indicators">
+			<li class="active" data-target="#img" data-slide-to="0"></li>
+			<li data-target="#img" data-slide-to="1"></li>
+			<li data-target="#img" data-slide-to="2"></li>
+		</ul>
+		<!-- slide show -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="image1.jpg" alt="nature" width="1366" height="500">
+			</div>
+			<div class="carousel-item">
+				<img src="pic1.jpg" alt="nature" width="1366" height="500">
+			</div>
+			<div class="carousel-item">
+				<img src="rose.jpg" alt="rose" width="1366" height="500">
+			</div>
+		</div>
+		<!-- left right controls -->
+		<a  href="#img" class="carousel-control-prev" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a href="#img" class="carousel-control-next" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+
+
+</body>
+</html>

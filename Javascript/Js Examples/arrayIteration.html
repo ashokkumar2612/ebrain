@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Iteration</title>
+</head>
+<body>
+	<h3>forEach() method</h3>
+	<p id="value"></p>
+	<script>
+		var x = [20, 24, 81, 98, 50];
+		var y = "";
+		x.forEach(myfunction);
+		function myfunction(value, index, array) {
+		y += value + "<br>";
+	}
+	document.getElementById('value').innerHTML = y;
+
+	</script>
+	<h3>map() method</h3>
+	<p id="index"></p>
+	<script>
+		var x = [20, 24, 81, 98, 50];
+		var y = x.map(myfunction);
+		function myfunction(value, index, array) {
+			return index * 7
+		}
+		document.getElementById('index').innerHTML = y;
+	</script>
+	<h3>filter() method</h3>
+	<p id="filter"></p>
+	<script>
+		var a = [20, 24, 81, 98, 50];
+		var b = a.filter(myfunction);
+		function myfunction(value) {
+			return value > 25;
+		}
+         document.getElementById('filter').innerHTML = b;
+	</script>
+	<h3>reduce() method</h3>
+	<p id="reduce"></p>
+	<script>
+		var p = [20, 24, 81, 98, 50];
+		var q = p.reduce(myfunction);
+		function myfunction(total, value) {
+			return total * value;
+		}
+		document.getElementById('reduce').innerHTML = q;
+	</script>
+	<h3>every() method</h3>
+	<p id="every"></p>
+	<script>
+		var a = [20, 24, 81, 98, 50];
+		var b = a.every(myfunction);
+				function myfunction(value) {
+					return value > 25;
+				}
+          document.getElementById('every').innerHTML ="Array value is" + " " + b;
+	</script>
+	<h3>some() method</h3>
+	<p id="some"></p>
+	<script>
+		var x =[20, 24, 81, 98, 50];
+		var y = x.some(myfunction);
+				function myfunction(value) {
+					return value > 25;
+				}
+          document.getElementById('some').innerHTML ="Array value is" + " " + y; 
+	</script>
+	<h3>lastIndexOf() method</h3>
+	<p id="lastindex"></p>
+	<script>
+		var array = ["Apple", "Banana", "Strawberry", "Goa", "Water melon", "Goa", "Banana", "Grape"];
+		var last = array.lastIndexOf("Banana");
+		document.getElementById('lastindex').innerHTML ="The lastIndexOf('Banana') is " + last;
+	</script>
+	<h3>find() method</h3>
+	<p id="find"></p>
+	<script>
+		var i = [20, 24, 81, 98, 50];
+		var j = i.find(myfunction);
+		function myfunction(value, index) {
+			return index > 3;
+		}
+		document.getElementById('find').innerHTML = "The next 3rd position of passed the test first array element is " + j;
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+div{
+	height:100px;
+	width:160px;
+	background-color: lightblue;
+	border: 1px dashed gray;
+	overflow-x: scroll;
+	white-space: nowrap;
+}

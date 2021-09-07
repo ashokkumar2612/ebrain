@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<title>Student Details</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<script src="student.js"></script>
+	<div class="container">
+  <h2>Student details</h2>
+  <form action="/action_page.php">
+  	<div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" class="form-control" id="age" placeholder="Enter age" name="age">
+    </div>
+    <div class="form-group">
+      <label for="male">Select gender:</label>
+      <div>
+      <input type="radio" class="ml-3" value ="Male" name="gender">Male
+      <input type="radio" class="ml-3" value ="female" name="gender">Female
+    </div>
+</div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="college">College:</label>
+      <input type="text" class="form-control" id="college" placeholder="Enter college" name="college">
+    </div>
+    <div class="form-group">
+      <label for="dprt">Department:</label>
+      <select class="form-control" id="dprt" name="dprtmnt">
+        <option value="" disabled selected>Select department</option>
+        <option>Mechanical Engineering</option>
+        <option>Information Technology</option>
+        <option>Computer science</option>
+        <option>Electronics & communications</option>
+      </select>
+  </div>
+       <div class="form-group">
+      <label for="cgpa">CGPA:</label>
+      <input type="number" class="form-control" id="cgpa" placeholder="Enter CGPA" name="cgpa">
+    </div>
+    <button type="button" class="px-5 py-2 bg-success" onclick="myfunction()">Submit</button>
+</body>
+</html>

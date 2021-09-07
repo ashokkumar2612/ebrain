@@ -1,0 +1,11 @@
+div.container{
+	position: absolute;
+	left: 70px;
+	top: 40px;
+}
+div.img{
+	position: absolute;
+	opacity:0.3;
+	height:500px; 
+	height:500px;
+}

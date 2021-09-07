@@ -1,0 +1,6 @@
+h1:first-child { 
+	background-color: lightblue; 
+} 
+input:focus { 
+	background-color: lightgreen; 
+}

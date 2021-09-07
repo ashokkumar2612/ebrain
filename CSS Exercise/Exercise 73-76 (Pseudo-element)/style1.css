@@ -1,0 +1,21 @@
+h1::first-line {
+	color:red;
+	font-variant: small-caps;
+}
+p::first-letter {
+	color: blue;
+	font-size:xx-large;
+}
+h1::before {
+	content: attr(href);
+h1::first-letter {
+	font-size: xx-large;
+}
+
+    
+/*h1::after {
+	/*content:url('smiley.gif');*/
+}
+::selection {
+	color:hotpink;
+	background: gray;

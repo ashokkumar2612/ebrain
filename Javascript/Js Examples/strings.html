@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings</title>
+</head>
+<body>
+	<h3>Backslash to escape the string rom the double quotes</h3>
+	<p id="demo"></p>
+	<h3>And also the single slash toi escape the single quote</h3>
+	<p id="demo1"></p>
+	<h3>Index the string in a string</h3>
+	<p id="string"></p>
+	<p id="string1"></p>
+	<script>
+		var str = "The boys are going to school by que";
+		var loc = str.indexOf("que");
+		var pos = str.lastIndexOf("school");
+        document.getElementById('string').innerHTML = loc;
+        document.getElementById('string1').innerHTML = pos;
+    </script>
+    <script>
+        var y = 'It\'s alright.';
+        document.getElementById("demo1").innerHTML = y; 
+    </script>
+    <script>
+		var x = "We are the so-called \"Vikings\" from the north.";
+        document.getElementById("demo").innerHTML = x; 
+</script>
+	</script>
+<h3>HTML String Property</h3>
+<p>Here the string length can calculate also the spaces</p>
+<p id="length"></p>
+<script>
+	var h = "wkruu WHROV PIWEHNPIWHENV VOIWBVIPEWV"
+	document.getElementById('length').innerHTML= h.length;
+</script>
+</body>
+</html>
+
+

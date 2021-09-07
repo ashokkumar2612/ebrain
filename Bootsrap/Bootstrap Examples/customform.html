@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>custom checkbox</title>
+</head>
+<body>
+	<div class="container mt-3">
+		<form>
+			<div class="custom-control custom-checkbox mb-3">
+				<input type="checkbox" class="custom-control-input" id="customcheck">
+				<label class="custom-control-label" for="customcheck">checkbox</label>
+			</div>
+			<input type="checkbox" id="check">
+			<label for="check">checkbox</label>
+			<div class="custom-control custom-switch">
+				<input type="checkbox" class="custom-control-input" id="switch">
+				<label class="custom-control-label" for="switch">toggle me</label>
+			</div>
+			<div class="custom-control custom-radio">
+				<input class="custom-control-input" type="radio" id="radio">
+				<label class="custom-control-label" for="radio">radio</label>
+			</div>
+				<input type="radio" id="radio">
+				<label for="radio">default</label>
+				<br>
+				<select class="custom-select" name="cars">
+					<option selected><--custom select menu--></option>
+					<option value="volvo">volvo</option>
+					<option value="BMW">BMW</option>
+					<option value="KIA">KIA</option>
+					<option class="Maruti">Maruti</option>
+				</select>
+				<label for="range">custom range</label>
+				<input type="range" class="custom-range" id="range">
+				<label for="range">default</label>
+				<input type="range" id="range">
+				<div class="custom-file">
+					<input type="file" id="file" class="custom-file-input">
+					<label class="custom-file-label" for="file">choose file</label>
+					<input type="file" name="defaultfile">
+		</form>
+	</div>
+
+</body>
+</html>

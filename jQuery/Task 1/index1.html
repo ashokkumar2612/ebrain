@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="student.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid bg-light py-3">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+                <div class="card card-body">
+                    <h3 class="text-center mb-4">Student Information</h3>
+                    <div class="alert alert-danger">
+                        <a class="close font-weight-light" data-dismiss="alert" href="#">×</a>Student Information is very precious.
+                    </div>
+                    <form id="myform">
+                    <fieldset>
+                    	<legend><a href="index.html" style="text-decoration: none;">Logout</a></legend>
+                    	<div class="form-group">
+                    		<label for="number">Registration Number<span>(required, registration number)</span></label>
+                            <input id="number" class="form-control input-lg" placeholder="Registration Number" name="number" type="text" required>
+                        </div>
+                    	<div class="form-group">
+                    		<label for="name">Name<span>(required, at least 2 charecters)</span></label>
+                            <input id="name" class="form-control input-lg" placeholder="Student Name" name="name" type="text" required="">
+                        </div>
+                        <div class="form-group">
+                        	<label for="age">Age<span>(required, only numbers)</span></label>
+                            <input id="age" class="form-control input-lg" placeholder="Age" name="age" type="text" required="">
+                        </div>
+                        <div class="form-group">
+                        	<label for="email">Email<span>(required, won't be published)</span></label>
+                            <input id="email" class="form-control input-lg" placeholder="E-mail Address" name="email" type="text" required="">
+                        </div>
+                        <div class="form-group">
+                        	<label>department<span>(required, select anyone)</span></label>
+                            <select id="dpt" class="form-control input-lg">
+                                <option selected disabled>Department</option>
+                                <option>Mechanical Engineering</option>
+                                <option>Information Technology</option>
+                                <option>Electronics & Communication</option>
+                                <option>Civil Engineering</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                        	<label>Behaviour<span>(required, select anyone)</span></label>
+                            <select id="beh" class="form-control input-lg">
+                                <option selected disabled>Behaviour</option>
+                                <option>Very Good</option>
+                                <option>Good</option>
+                                <option>Medium</option>
+                                <option>Bad</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                        	<label>Comment<span>(required)</span></label>
+                        	<textarea id="cmnt" class="form-control input-lg" placeholder="type here" name="cmnt" type="text" rows="5" required=""></textarea>
+                        <div class="checkbox">
+                            <label class="small">
+                                <input name="terms" type="checkbox" required>I have checked and agree to the <a href="table.html">student Information</a>
+                            </label>
+                        </div>
+                        <button id="subm" class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                    </fieldset>
+                </form>
+                </div>
+        </div>
+    </div>
+</div>
+<script>
+	$("form").validate();
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<title>Signup</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<script src="password.js"></script>
+	<div class="card mx-auto text-center mt-5">
+		<div class="card-body text-content-justify">
+			<form class="was-validated">
+				<div class="form-group">
+			username &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+			<input type="text" class="py-1 px-2" placeholder="username" required>
+			<div class="valid-feedback">Valid.</div>
+             <div class="invalid-feedback">Please fill out this field.</div>
+         </div>
+             <div class="form-group">
+			new password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+			<input type="password" id="new" class="py-1 px-2" placeholder="new password" required>
+			 <div class="valid-feedback">Valid.</div>
+             <div class="invalid-feedback">Please fill out this field.</div>
+         </div>
+         <div class="form-group">
+			confirm password : 
+			<input type="password" id="confirm" class="py-1 px-2" placeholder="confirm password" required>
+			<div class="valid-feedback">Valid.</div>
+             <div class="invalid-feedback">Please fill out this field.</div>
+         </div>
+			<button type="button" class="btn btn-primary" onclick="login()">signup</button>
+		</form>
+			<p id="demo" class="pt-3 text-primary"></p>
+		</div>
+	</div>
+</body>
+</html>

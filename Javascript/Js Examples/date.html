@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date</title>
+</head>
+<body>
+	<h3>Date() comparisioin</h3>
+	<p id="date"></p>
+	<script>
+		var a = new Date();
+		var b = new Date();
+		b.setFullYear(2019,11,26);
+		if (b > a)
+			date = "Your bday is Upcoming";
+		else
+			date = "Your bday is completed";
+		document.getElementById('date').innerHTML = date;
+	</script>
+</body>
+</html>

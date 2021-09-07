@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('p#hide').click(function() {
+				$(this).hide();
+			});
+          // $('p').mouseenter(function() {
+          // 	alert('hover the p content')
+          // });
+          $('input').focus(function(){
+          	$(this).css('background-color','blue');
+          });
+          $('input').blur(function(){
+          	$(this).css('background-color', 'green')
+          	});
+          $('button').on('click',function(){
+          	$('p').hide(1000);
+          });
+          $('button').on('click',function(){
+          	$('p').show(1000);
+          });
+          $('#toggle').on('click',function(){
+          	$('p').toggle();
+          });
+		});
+	</script>
+
+	<title>jQuery</title>
+</head>
+<body>
+	<p>Hello here!!</p>
+	<p id="hide">hide content</p>
+	<input type="text"><br>
+	<button>Click</button><br>
+	<button id="toggle">toggle</button>
+</body>
+</html>

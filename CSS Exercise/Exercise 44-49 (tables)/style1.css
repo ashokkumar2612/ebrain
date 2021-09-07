@@ -1,0 +1,23 @@
+table, th, td{
+	border:2px solid black;
+	width:50%;
+}
+div{
+	overflow-x:auto;
+}
+table{
+	border-collapse: collapse;
+}
+th, td{
+	height:50px;
+	text-align: center; 
+}
+th{
+	background-color: #144eba;
+}
+td:hover {
+	background-color: #476fba;
+}
+tr:nth-child(odd){
+	background-color: #7ba1e8;
+}

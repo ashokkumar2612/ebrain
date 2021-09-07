@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>  
+<html>  
+  
+<head>  
+    <title>  
+        Factorial of a number using JavaScript 
+    </title> 
+</head>  
+  
+<body style = "text-align:center;">  
+      
+    <h1 style = "color:green;" >  
+        GeeksForGeeks  
+    </h1> 
+      
+    <input id = "GFG_UP">
+          
+    <button onclick = "Factorial()"> 
+        Click Here 
+    </button> 
+      
+    <p id = "GFG_DOWN" style = 
+        "color:green; font-size: 20px; font-weight: bold;"> 
+    </p> 
+          
+    <script>    
+        function Factorial() {
+        var n = document.getElementById('GFG_UP').value;
+        var down = document.getElementById('GFG_DOWN');
+            if(isNaN(n) || (n < 0)){
+                ans = "Please give valid number"
+            }
+            else{ 
+             ans = 1;
+            for (var i = 1; i <= n; i++) { 
+                ans = ans * i; 
+        }
+        } 
+        down.innerHTML = ans;
+    }
+
+    </script>  
+</body>  
+  
+</html> 

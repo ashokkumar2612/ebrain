@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doodle</title>
+	<script src="https://unpkg.com/css-doodle@0.7.7/css-doodle.min.js"></script>
+	<style type="text/css">
+		.doodle{
+			position: fixed;
+			z-index:-1;
+		}
+	</style>
+</head>
+<body>
+	<css-doodle class="doodle">
+  :doodle{
+  @grid:10 / 100vmax;
+  }
+  background:@pick(yellow,blue,red,green,grey,black,skyblue,navy,lightgreen,violet,orange);
+  opacity:@r(.9);
+  clip-path: polygon(@r(50%) 0,50% @r(70%),0 @r(100%));
+  animation: test infinite @r(100s, 150s) linear;
+  @keyframes test {
+  0%{
+  transform: translate3d(0,0,0);`
+  }
+  50%{
+  transform: translate3d(@r(-500%,1000%),@r(-500%,1500%),0);
+  }
+  100%{
+  transform: translate3d(0,0,0)
+  }
+  }
+  </css-doodle>
+
+</body>
+</html>

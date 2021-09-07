@@ -1,0 +1,63 @@
+#grid {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
+}
+.cont{
+  background-image: url(img.jpeg);
+}
+input{
+  border:0;
+  border-bottom: 2px solid black;
+  outline: none;
+  font-size: 30px;
+}
+.field{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+label{
+  order: -1;
+  font-size: 15px;
+  padding-left: 5px;
+  transition: all .3s ease-in;
+  pointer-events: none;
+  transform: translateY(30px);
+}
+input:focus+label{
+  transform: translate(-2px);
+}
+input[type="text"]{
+  font-size: 20px;
+}
+    .doodle{
+  position: fixed;
+  z-index:-1;
+}
+.container{
+  width:100%;
+  background: transparent;
+  margin: 2rem auto;
+  padding: 5rem;
+  box-shadow: 0 0 50px 0 rgba(0,0,0,.2)
+}
+body{
+  font-family: courier New;
+}
+h2{
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+}

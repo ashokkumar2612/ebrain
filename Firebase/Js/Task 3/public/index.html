@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<title>Scintific Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<script src="scintific.js"></script>
+<h1 class="pt-md-2 text-center mx-auto d-none d-md-block">Scintific Calculator</h1>
+<div class="text-center mx-auto pt-3">
+<form name="calculator"> 
+<div class="grid-container shadow">
+  <input class="box" name="display" id="display" type="text" disabled>
+  <button type="button" class="violet" value="x" onclick="sqrt('x')">&#8730;</button>
+  <button type="button" class="violet" value="x" onclick="sqr('x')">x<sup>2</sup></button>
+  <button type="button" class="violet" value="x" onclick="exp('x')">exp</button>
+  <button type="button" class="green" value="pow" onclick="power('pow')">pow</button>
+  <button type="button" class="violet" value="x" onclick="sin('x')">sin</button>
+  <button type="button" class="violet" value="x" onclick="cos('x')">cos</button>
+  <button type="button" class="violet" value="x" onclick="log('x')">log</button>
+  <button type="button" class="violet" value="x" onclick="deg('x')">deg</button>
+  <button type="button" class="yellow" value="pi" onclick="pi('pi')">&pi;</button>
+ <button type="button" class="yellow" onclick="factorial()">!</button>
+  <button type="button" class="yellow" onclick="addChar('(')">(</button>
+  <button type="button" class="yellow" onclick="addChar(')')">)</button>
+  <button type="button" class="red" onclick="cancel()">CE</button>
+  <button type="button" class="red" onclick="del('del')">del</button>
+  <button type="button" class="pink" value="*" onclick="addChar('*')">&times;</button>
+  <button type="button" class="pink" value="/" onclick="addChar('/')">&divide;</button>
+  <button type="button" value="1" onclick="addChar('1')">1</button>
+  <button type="button" value="2" onclick="addChar('2')">2</button>
+  <button type="button" value="3" onclick="addChar('3')">3</button>
+  <button class="pink" type="button" value="+" onclick="addChar('+')">+</button>
+  <button type="button" value="4" onclick="addChar('4')">4</button>
+  <button type="button" value="5" onclick="addChar('5')">5</button>
+  <button type="button" value="6" onclick="addChar('6')">6</button>
+  <button class="pink" type="button" value="-" onclick="addChar('-')">-</button>
+  <button type="button" value="7" onclick="addChar('7')">7</button>
+  <button type="button" value="8" onclick="addChar('8')">8</button>
+  <button type="button" value="9" onclick="addChar('9')">9</button>
+  <button type="button" class="equal green" onclick="result()">=</button>
+  <button type="button" value="." onclick="addChar('.')">.</button>
+  <button type="button" value="0" onclick="addChar('0')">0</button>
+  <button type="button" class="red" value="apx" onclick="round('apx')">apx</button>
+</div>
+</form>
+</div>
+</body>
+</html>

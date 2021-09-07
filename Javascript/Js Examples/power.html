@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Power</title>
+</head>
+<body>
+	<h3>Math.power</h3>
+	<input id="dem">
+	<input id="de">
+	<button onclick="func()">Power</button>
+	<p id="demo"></p>
+	<script>
+		function func() {
+		var x = document.getElementById('dem').value;
+		var y = document.getElementById('de').value;
+		var z = document.getElementById('demo');
+		 if(isNaN(x) || isNaN(y)){
+                ans = "Please give valid number"
+            }
+            else{ 
+            	ans = Math.pow(x, y);
+            }
+		z.innerHTML = ans;
+	}
+	</script>
+</body>
+</html>

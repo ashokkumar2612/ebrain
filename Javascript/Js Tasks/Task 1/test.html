@@ -1,0 +1,56 @@
+<html>
+<body>
+   <input id="name"> 
+   <button onclick="myfun()">submit</button>
+<script>
+   function myfun() {
+ var student = {
+   "profile" : {
+   "name" : "",
+   "fathername" : "",
+   "address" : "",
+   "email" : "",
+   "phone" : "",
+   "college" : "",
+   "UG" : {
+    "1 year" : {
+      "physics" : "",
+      "chemistry" : "",
+      "mathematics" : "",
+      "2 year" : {
+      "thermodynamics" :"",
+      "thermal engineering" :"",
+      "english" : "",
+      "3 year" : {
+      "machinary" : '',
+      "automobile" : "",
+      "ethics" :"",
+   "PG" : {
+    "1 year" : {
+      "physics" : "",
+      "chemistry" : "",
+      "mathematics" : "",
+      "2 year" : {
+      "thermodynamics" :"",
+      "thermal engineering" :"",
+      "english" : "",
+      "3 year" : {
+      "machinary" : '',
+      "automobile" : "",
+      "ethics" :""
+   }
+}
+}
+}
+}
+}
+}
+}
+   }
+}
+student.profile.name = document.getElementById('name').value;
+console.log(student.profile);
+}
+</script>
+</body>
+</html>

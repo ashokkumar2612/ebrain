@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature</title>
+</head>
+<body>
+	<h1>Temperature</h1>
+	<h3 id="temp"></h3>
+	<p>This date is showing on the button</p>
+	<button onclick ="this.innerHTML=Date()"> display Date</button>
+	<p>instead of this?</p>
+	<button onclick="document.getElementById('time').innerHTML=Date();">Below Date</button>
+	<p id="time"></p>
+	<button onclick="display()">Onclick</button>
+	<script>
+		function toCelcious(f) {
+			return (5/9) * (f - 32);
+		}
+		document.getElementById('temp').innerHTML =
+		"Now the Temperature is " + toCelcious(40) +"degree Celcious.";
+         function display() {
+         	document.getElementById('time').innerHTML=Date();
+         } 
+		document 
+	</script>
+
+</body>
+</html>

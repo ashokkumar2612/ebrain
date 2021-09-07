@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="src=https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title></title>
+	<script type="text/javascript">
+		$(function() {
+			$("#fname_error_message").hide();
+			$("#sname_error_message").hide();
+			$("#email_error_message").hide();
+
+			var error_fname = false;
+			var error_sname = false;
+			var error_email = false;
+
+			$("#form_fname").focusout(function() {
+				check_fname();
+			});
+			$("#form_sname").focusout(function() {
+				check_sname();
+			});
+			$("#form_email").focusout(function() {
+				check_email();
+			});
+
+			function check_fname() {
+				var pattern = /^[a-zA-Z]*$/;
+				var fname = $("#form_fname").val();
+				if(pattern.test(fname) && fname != "") {
+					$("#fname_error_message").hide();
+					$("#form_fname").css("border_bottom", "2px solid green");
+				} else {
+					$("#fname_error_message").html("should contain only charecters");
+					$("#fname_error_message").show();
+					$("#form_fname").css("border-bottom", "2px solid red");
+					error_fname =true;
+				}
+			}
+			function check_sname() {
+				var pattern = /^[a-zA-Z]*$/;
+				var sname = $("form_sname").val();
+				if(pattern.test(sname) && sname != "") {
+					$("#sname_error_message").hide();
+					$("#form_sname").css("border_bottom", "2px solid green");
+				}else{
+					$("#sname_error_message").html("should contain only charecters");
+					$("#sname_error_message").show();
+					$("#form_sname").css("border_bottom", "2px solid red");
+					error_sname =true;
+				}
+			}
+			function check_email() {
+				var pattern = /^[a-zA-Z]*$/;
+				var email = $("form_email").val();
+				if(pattern.test(email) && email != "") {
+					$("#email_error_message").hide();
+					$("#form_email").css("border_bottom", "2px solid green");
+				}else{
+					$("#email_error_message").html("should contain only charecters");
+					$("#email_error_message").show();
+					$("#form_email").css("border_bottom", "2px solid red");
+					error_email =true;
+				}
+			}
+
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>REGISTER</h1>
+		<form id="registration_form"></form>
+		<div>
+	<input type="text" id="form_fname" name="" required="">
+	<span class="error_form" id="fname_error_message"></span>
+	<label>First Name</label>
+</div>
+<div>
+<input id="form_sname" type="text" name="" required="">
+<span class="error_form" id="sname_error_message"></span>
+<label>Second Name</label>
+</div>
+<div>
+<input id="form_email" type="text" name="" required="">
+<span class="error_form" id="email_error_message"></span>
+<label>Email</label>
+</div>
+<input type="submit" value="Register" name="">
+</div>
+</body>
+</html>

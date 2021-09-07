@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <input type="text" id="box">
+  <input type="text" id="box1">
+  <input type="submit" value="Submit" onclick="guardarNumeros()">
+	<script>
+      var items = [];
+function guardarNumeros() {
+   var boxvalue = document.getElementById('box').value;
+   var box = document.getElementById('box1').value;
+   var data = {
+   	FirstName:boxvalue,
+   	LastName:box
+   }
+  var x = JSON.parse(JSON.stringify({data}));
+  	items.push(x);
+  	// localStorage.setItem("student",JSON.stringify(items));
+  	console.log(items);
+}
+	</script>
+
+</body>
+</html>

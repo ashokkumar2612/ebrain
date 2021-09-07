@@ -1,0 +1,13 @@
+div{
+  text-align: center;
+}
+table {
+  width: 50%;
+  counter-reset: row-num;
+}
+table tbody tr {
+  counter-increment: row-num;
+}
+table tbody tr td:first-child::before {
+    content: counter(row-num) " ";
+}

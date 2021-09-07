@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/css-doodle@0.7.7/css-doodle.min.js"></script>
+<style type="text/css">
+	.doodle{
+  position: fixed;
+  z-index:-1;
+}
+.container{
+  width:70%;
+  background: transparent;
+  padding: 5rem;
+  box-shadow: 0 0 50px 0 rgba(0,0,0,.2)
+}
+*{
+  margin:0;
+}
+</style>
+</head>
+<body>
+	<css-doodle grid="5" class="doodle">
+  :doodle{
+  @grid: 10 / 100vmax;
+  grid-gap:4vmax;
+  background:#b2dfdb;
+  }
+  background:blue;
+  transform:scale(@r(.1,1.9))
+  translate3d(@r(150px),@r(200px),0)
+  rotate(@r(180deg));
+  background:hsla(@r(100),85%,@r(90%,100%),@r(.9));
+  @shape: clover 5;
+  </css-doodle>
+<!-- <div class="container">
+  <h1>Hello world look here!!</h1>
+</div> -->
+
+</body>
+</html>

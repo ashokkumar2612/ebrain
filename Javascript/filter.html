@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function onlyNum(value) {
+    if (typeof value !== 'number') {
+        return false;
+    }
+    return true;
+}
+function isString(value){
+	if (typeof value !== 'string'){
+		return false
+	}
+	return true
+}
+
+let data = [10, 20, "30", 1, 5, 'arun', undefined, 'ashok'];
+
+function filter(arr, filterFn){
+	let array = [];
+	for (var i = 0; i < arr.length; i++) {
+		console.log("filterFn(arr[i]) ::: ",arr[i], filterFn(arr[i]))
+		if (filterFn(arr[i])) { array.push(arr[i])}
+	}
+	return array
+}	
+let number = filter(data, onlyNum);
+
+let not = (f) => n => !f(n)
+
+let isEven = n => n%2 === 0 ? true : false
+
+let isOdd = not(isEven)
+// let isString = not(onlyNum)
+
+// let string = filter(data, isString);
+
+console.log(filter(number, isOdd))
+console.log(filter(number,isEven))
+console.log(filter(data, isString))
+
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body {
+	background: url(../image/nature.png);
+	width: 100%;
+	background-size: 100%;
+}
+.card {
+	background-color: rgba(30%,50%,80%,0.3);
+	width: 500px;
+	font-size: 18px;
+}
+input{
+	border-radius: 5px;
+	font-family: Comic Sans, Comic Sans MS, cursive;
+}

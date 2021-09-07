@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+	<h3>Array comes with list</h3>
+	<p id="list"></p>
+	<script>
+		var a, b, c, i;
+		a = ["cars","bikes","flight","roket"]
+		b = a.length;
+		c = "<ul>";
+		for(i = 0; i < b; i++) {
+			c += "<li>" + a[i] + "</li>";
+		}
+		c += "</ul>";
+		document.getElementById('list').innerHTML = c;
+	</script>
+	<h3>Array function by using forEach</h3>
+	<p id="call"></p>
+	<script>
+		var fruit, tape;
+		fruit = ["apple","berry","banana"];
+		tape = "<ul>";
+		fruit.forEach(myFunction);
+		tape += "</ul>";
+		document.getElementById('call').innerHTML = tape;
+		function myFunction(value) {
+			tape += "<li>" + value + "</li>";
+		}
+	</script>
+
+</body>
+</html>

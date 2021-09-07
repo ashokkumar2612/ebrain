@@ -1,0 +1,9 @@
+div {
+	float: left;
+	width: 50%;
+	height: 500px;
+	background-color: #ffff;
+}
+img:hover { opacity: 0.5;
+	float: right;
+}

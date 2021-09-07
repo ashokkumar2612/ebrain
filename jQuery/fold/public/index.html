@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Input Responsive</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="input.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://unpkg.com/css-doodle@0.7.7/css-doodle.min.js"></script>
+</head>
+<body>
+	<css-doodle class="doodle">
+  :doodle{
+  @grid:25 / 100vmax
+  }
+  --hue:@calc(100 + .5 * @row()*@col());
+  background:hsla(var(--hue),50%,70%,@r(.1,.9));
+  clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%'));
+  </css-doodle>
+ <css-doodle class="doodle">
+  :doodle{
+  @grid:10 / 100vmax;
+  }
+  background:@pick(yellow,blue,red,green,grey,black,skyblue,navy,lightgreen,violet,orange);
+  opacity:@r(.9);
+  clip-path: polygon(@r(50%) 0,50% @r(70%),0 @r(100%));
+  animation: test infinite @r(100s, 150s) linear;
+  @keyframes test {
+  0%{
+  transform: translate3d(0,0,0);
+  }
+  50%{
+  transform: translate3d(@r(-500%,1000%),@r(-500%,1500%),0);
+  }
+  100%{
+  transform: translate3d(0,0,0)
+  }
+  }
+  </css-doodle>
+	<css-doodle grid="5" class="doodle">
+  :doodle{
+  @grid: 10 / 100vmax;
+  grid-gap:4vmax;
+  }
+  background:blue;
+  transform:scale(@rand(.1,1.9))
+  translate3d(@r(50px),@r(100px),0);
+  background:hsla(@r(360),85%,@r(70%,90%),@r(.9));
+  @shape: heart;
+  </css-doodle>
+<div class="container">
+  <h2>Input Changing Method</h2>
+        	<form>
+        		<div class="field">
+        <input type="text" class="w-75 form-control">
+        <label>Enter Details</label>
+    </div>
+        </form>
+        <button type="button" id="submit" class="px-5 py-3 btn btn-primary mt-2">submit</button>
+</div>
+<div class="container">
+	<h2>Not Completed</h2>
+	<ol class="d-flex"><h3 id="one"></h3></ol>
+	</div>
+	<div class="container">
+	<h2>Completed</h2>
+	<ol class="d-flex"><h3 id="too"></h3></ol>
+	</div>
+</body>
+ <script type="text/javascript">
+ 	$(document).ready(function(){
+	$("#submit").click(function(){
+		var arr = []
+	var l = '<button type="button" class="material-icons remove ml-2 bg-warning border-0 px-3" style="font-size:20px;color:red">delete</button>';
+	var p = '<button type="button" class="material-icons btnr ml-2 bg-success border-0 px-3" style="font-size:20px;color:green">check_circle</button>';
+		var c = JSON.parse(localStorage.getItem("values"));
+		if(c!= null){
+		for (var i = 0; i < c.length; i++) {
+			arr.push(c[i]);
+		}
+	}
+		var a = $("input").val();
+		if (a==""||a==null) {
+			alert("please Enter the field")
+		}else{
+			var b = {value:a, del:l, ok:p};
+			arr.push(b);
+			localStorage.setItem("values",JSON.stringify(arr));
+				var d = "";
+	for(var i = 0; i < arr.length; i++) {
+		d =  "<li>"+ arr[i].value + arr[i].del + arr[i].ok +"</li>";
+	}
+	$("form").trigger("reset");
+	$("#one").append(d);
+  $('.remove').click(function(){
+  $(this).closest('li').remove();
+});
+  	$('.btnr').click(function(){
+  		$(this).closest('li').detach();
+  $(this).closest('li').appendTo("#too");
+  $(this).css("display","none");
+});
+  }
+	});
+});
+ </script>
+</html>

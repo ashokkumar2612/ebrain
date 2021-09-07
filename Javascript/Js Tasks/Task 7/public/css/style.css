@@ -1,0 +1,22 @@
+body{
+	background-size: 100%;
+	background-image: url('../image/alph.jpg');
+    color: white;
+}
+button{
+	color: white;
+}
+.card{
+	width: 50%;
+	background-color: rgba(0%,30%,10%,0.5);
+}
+input{
+	width: 80%;
+}
+p#lower{
+	font-size: 30px;
+}
+.card-text{
+	font-size: 35px;
+	font-family: Cursive;
+}

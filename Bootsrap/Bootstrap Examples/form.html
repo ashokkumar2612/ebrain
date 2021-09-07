@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<title>form</title>
+</head>
+<body>
+	<div class="container">
+	<form class="form-inline mt-2">
+	<div class="form-group">
+		<label for="email" class="mb-2 mr-sm-2">Email:</label>
+		<input type="email" name="email" id="email" class="form-control mb-2 mr-sm-2" placeholder="Enter Email">
+	</div>
+	<div class="form-group">
+		<label for="pswd" class="mb-2 mr-sm-2">password:</label>
+		<input type="password" class="form-control mb-2 mr-sm-2" name="pswd" placeholder="Enter password">
+	</div>
+	<div class="form-check">
+		<label class="form-check-label mb-2 mr-sm-2" for="lable"><input type="checkbox" name="lable"> Remember</label>
+	</div>
+	<br>
+	<button type="submit" class="btn btn-primary mb-2 mr-sm-2">Submit</button>		
+	</form>
+	<br><br>
+	<form>
+		<div class="row">
+			<div class="col">
+				<input type="text" class="form-control" name="name" placeholder="name">
+			</div>
+			<div class="col">
+				<input type="password" class="form-control" name="password" placeholder="password">
+			</div>
+		</div>
+	</form>
+	<br>
+	<button type="submit" class="btn btn-primary">Submit</button>
+	<br><br>
+	<form class="was-validated"><!-- was-validated -->
+	<div class="form-group">
+		<label for="name">Name:</label>
+		<input type="text" name="name" class="form-control" placeholder="name" required>
+		<div class="valid-feedback">valid</div><!-- valid-feedback -->
+		<div class="invalid-feedback">please enter valid</div><!-- invalid-feedback -->
+	</div>
+	<div class="form-group">
+		<label for="pswd">Password</label>
+		<input type="password" name="pswd" class="form-control" placeholder="password" required>
+		<div class="valid-feedback">valid</div>
+		<div class="invalid-feedback">please enter valid</div>
+	</div>
+	<div class="form-group form-check">
+	<label class="form-check-label"><input type="checkbox" name="remember" class="form-check-input" required>Confirm your valiation
+     <div class="valid-feedback">valid</div>
+     <div class="invalid-feedback">please check your validation</div></label>
+	</div>  
+	<button class="btn btn-primary" type="submit">Submit</button>
+</form>
+	<br><br>
+	<form class="needs-validation" novalidate>
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" name="email" placeholder="Enter your Email" required>
+			<div class="valid-feedback">Valid</div>
+			<div class="invalid-feedback">Please enter valid email</div>
+			</div>
+			<div class="form-group">
+				<label for="pswd">Password:</label>
+				<input type="password" class="form-control" name="pswd" placeholder="Enter your password" required>
+				<div class="valid-feedback">valid</div>
+				<div class="invalid-feedback">please enter valid password</div>
+			</div>
+			<div class="form-group form-check">
+				<label class="form-check-label"><input type="checkbox" class="form-check-input" required>confirm the checkbox
+					<div class="valid-feedback">valid</div>
+					<div class="invalid-feedback">please verify the checkbox</div></label>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+</body>
+</html>

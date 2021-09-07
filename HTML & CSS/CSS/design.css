@@ -1,0 +1,49 @@
+#wholepage
+{
+background-color:#3B281A;
+height:200px;
+width:80%;
+margin:0px auto;	
+}
+#container
+{
+background-color:#A03100;
+height:100px;
+width:60%;
+margin:0px auto;
+}
+#container ul
+{
+float:center;
+margin-bottom:30px;	
+}
+#container ul li
+{
+display:inline;
+margin-right:6px;
+}
+#container ul li a
+{
+color:white;
+text-decoration:none;
+font-size:20px;	
+}
+#photo
+{
+background-color:red;
+height:250px;
+width:80%;
+margin:0px auto;
+}
+#photo tr td a
+{
+color:black;
+font-style:none;
+}
+#photo a
+{
+background-color:black;
+width:80%;
+height:250px;
+margin:0px auto;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@import "compass/css3";
+
+@import url("https://getbootstrap.com/dist/css/bootstrap.css");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+body {
+  background: none repeat scroll 0 0 white;
+}
+
+nav.sidebar-menu-collapsed {
+  width: 50px;
+}
+nav.sidebar-menu-expanded {
+  width: 106px;
+}
+nav.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: none repeat scroll 0 0 #0099ff;
+  color: white;
+  padding: 20px 10px;
+}
+nav.sidebar a#justify-icon {
+  outline: 0;
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+}
+nav.sidebar a#logout-icon {
+  outline: 0;
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+nav.sidebar ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+}
+nav.sidebar ul li {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+nav.sidebar ul li a.expandable {
+  outline: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+nav.sidebar ul li a.expandable:hover {
+  color: #bbbbbb;
+}
+nav.sidebar ul li a.expandable span.expanded-element {
+  margin-left: 2px;
+  display: none;
+  font-size: 11px;
+  position: relative;
+  bottom: 2px;
+}
+nav.sidebar ul li.active {
+  background: none repeat scroll 0 0 black;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: -4px;
+  padding: 4px;
+}
+nav.sidebar ul li.active a.expandable {
+  color: white !important;
+}
+nav.sidebar ul li.active a.expandable:hover {
+  color: white !important;
+}
+
+	</style>
+</head>
+<body>
+	 <script type='text/javascript' src='//code.jquery.com/jquery-1.10.1.js'></script>
+    <button onclick="hello(10)">hello</button>
+    <!-- <nav class='sidebar sidebar-menu-collapsed'>
+      <a href='#' id='justify-icon'>
+        <span class='glyphicon glyphicon-align-justify'></span>
+      </a>
+      <ul>
+        <li class='active'>
+          <a class='expandable' href='#' title='Dashboard'>
+            <span class='glyphicon glyphicon-home collapsed-element'></span>
+            <span class='expanded-element'>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' title='APIs'>
+            <span class='glyphicon glyphicon-wrench collapsed-element'></span>
+            <span class='expanded-element'>APIs</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' title='Settings'>
+            <span class='glyphicon glyphicon-cog collapsed-element'></span>
+            <span class='expanded-element'>Settings</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' title='Account'>
+            <span class='glyphicon glyphicon-user collapsed-element'></span>
+            <span class='expanded-element'>Account</span>
+          </a>
+        </li>
+      </ul>
+      <a href='#' id='logout-icon' title='Logout'>
+        <span class='glyphicon glyphicon-off'></span>
+      </a>
+    </nav> -->
+    <script type="text/javascript">
+//     	(function() {
+//   $(function() {
+//     var collapseMyMenu, expandMyMenu, hideMenuTexts, showMenuTexts;
+//     expandMyMenu = function() {
+//       return $("nav.sidebar").removeClass("sidebar-menu-collapsed").addClass("sidebar-menu-expanded");
+//     };
+//     collapseMyMenu = function() {
+//       return $("nav.sidebar").removeClass("sidebar-menu-expanded").addClass("sidebar-menu-collapsed");
+//     };
+//     showMenuTexts = function() {
+//       return $("nav.sidebar ul a span.expanded-element").show();
+//     };
+//     hideMenuTexts = function() {
+//       return $("nav.sidebar ul a span.expanded-element").hide();
+//     };
+//     return $("#justify-icon").click(function(e) {
+//       if ($(this).parent("nav.sidebar").hasClass("sidebar-menu-collapsed")) {
+//         expandMyMenu();
+//         showMenuTexts();
+//         $(this).css({
+//           color: "#000"
+//         });
+//       } else if ($(this).parent("nav.sidebar").hasClass("sidebar-menu-expanded")) {
+//         collapseMyMenu();
+//         hideMenuTexts();
+//         $(this).css({
+//           color: "#FFF"
+//         });
+//       }
+//       return false;
+//     });
+//   });
+
+// }).call(this);
+    </script>
+
+</body>
+</html>

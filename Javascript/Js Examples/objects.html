@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+</head>
+<body>
+	<h1>Objects</h1>
+	<p id="nature"></p>
+	<script>
+		var forest = {
+			animal : "lion",
+			voice : "roars",
+			position : "king",
+			place : "mountain"
+		};
+		document.getElementById("nature").innerHTML = forest.animal + " " + forest.voice + " over " + " the " + forest.place;
+	</script>
+	<h3>getting variable from string to Array</h3>
+	<p id="hello"></p>
+<script>
+	var text = "I am good";
+	var cnt = text.split("");
+	var pnt = "";
+	var i;
+	for (i =0; i < cnt.length; i++) {
+		pnt += cnt[i] + "<br>"
+	}
+     document.getElementById('hello').innerHTML = pnt;
+</script>
+</body>
+</html>

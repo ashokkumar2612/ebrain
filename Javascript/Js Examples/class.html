@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class</title>
+</head>
+<body>
+	<h3>Classes using inherit with super method</h3>
+	<p id="inherit"></p>
+	<script>
+		class favour {
+			constructor(fruit) {
+				this.fruitName = fruit;
+			}
+			getting() {
+				return 'i love ' + this.fruitName;
+			}
+		}
+		class feel extends favour {
+			constructor(fruit, feeling) {
+				super(fruit);
+				this.feels = feeling;
+			} 
+		show() {
+			return this.getting() + ', ' +this.feels;
+		}
+	}
+	statement = new feel("apple","personally");
+	document.getElementById('inherit').innerHTML = statement.show();
+	</script>
+	<h3>class using Static method</h3>
+    <p id="static"></p>
+    <script>
+    	class first {
+    		constructor(name) {
+    			this.firstName = name;
+    		}
+    		static hello(x) {
+    			return 'We are friends, who ' + x.firstName;
+    		}
+    	}
+    	statement = new first('Ashok & Praksh');
+    	document.getElementById('static').innerHTML = first.hello(statement);
+    </script>
+    <h3>classes using get set method</h3>
+    <p id="get"></p>
+    <script>
+    	class parent {
+    		constructor(group) {
+    			this.troop = group;
+    		}
+    		get members() {
+    			return this.troop;
+    		}
+    		set members(x) {
+    			this.group = x;
+    		}
+    	}
+    		result = new parent("family");
+    		document.getElementById('get').innerHTML = 'i love my ' + result.members;
+    </script>
+</body>
+</html>

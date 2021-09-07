@@ -1,0 +1,8 @@
+<!Doctype html>
+<head>
+<title>dummy</title>
+<link rel="stylesheet" type="text/css" href="stylesheet/style.css"
+</head>
+<body>
+</body>
+</html>

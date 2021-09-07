@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		li:nth-child(3n)
+{
+    border-bottom: 1px solid black;
+}
+	</style>
+</head>
+<body>
+	<form id="form">
+	<input type="text" id="demo">
+	</form>
+	<button onclick="func()">sku</button>
+	<p id="dem"></p>
+	<script type="text/javascript">
+		function func(){
+var str = document.getElementById('demo').value;
+if(str ==" " || str == ""){
+	alert('error')
+}else{
+var words = str.split(" ");
+for (var i = 0; i <= words.length-1; i++) {
+    words[i] ='<li>' +words[i] + '</li>';
+}
+var word = words.join("");
+console.log(word)
+document.getElementById('dem').innerHTML = '<ol>' + word + '</ol>';
+document.getElementById('form').reset();
+}
+}
+	</script>
+
+</body>
+</html>

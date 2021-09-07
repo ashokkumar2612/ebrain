@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+  <script src="https://unpkg.com/css-doodle@0.7.7/css-doodle.min.js"></script>
+<style>
+  css-doodle {
+    --rule: ( :doodle {
+      position: absolute;
+      width: 100%;
+      @grid: 10 / 101% 100vh;
+      overflow: hidden;
+    }
+    animation: bounce linear @r(7s, 15s) @r(-1s, -5s) infinite;
+    opacity: @r(0.3, 1);
+    @place-cell: @r(100%) @r(100%);
+    @random(.3) {
+    :after {
+      content: '🍭';
+      position: absolute;
+      font-size: @r(25px, 35px);
+      transform: rotate(@r(360deg));
+    }
+    }
+    @random(.2) {
+      :after {
+        content: '🍫';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: '🧁';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: '🍪';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(@r(-101vh, -110vh));
+      }
+      100% {
+        transform: translateY(@r(101vh, 110vh));
+      }
+    }
+    );
+  }
+</style>
+  <title></title>
+</head>
+<body>
+<css-doodle use="var(--rule)"></css-doodle>
+
+<div class="textContainer">
+  Candyland
+</div>
+
+<div class="loaderWrapper">
+  <div class="loader"></div>
+</div>
+<a href="https://codemenatalie.com/blog" target="_blank">Created by CodeMeNatalie</a>
+</body>
+</html>
